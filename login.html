@@ -142,50 +142,38 @@
         const USUARIOS_DEFAULT = {
             "admin": {
                 nombre: "Administrador Airapí",
-                password: "altura2026",
+                password: "airapi2026",
                 role: "admin",
                 reportes: []
             },
-            "cap.cai": {
-                nombre: "Coordinador CAP/CAI",
-                password: "cai2026",
-                role: "user",
-                reportes: ["semanales-marzo-2026", "semanales-abril-2026"]
-            },
-            "elsa.medina": {
-                nombre: "Elsa Medina",
-                password: "elsa2026",
-                role: "user",
-                reportes: ["cap-elsa-medina"]
-            },
-            "daniela.alamilla": {
-                nombre: "Daniela Alamilla",
+            "daniela.gutierrez": {
+                nombre: "Daniela Gutiérrez",
                 password: "daniela2026",
                 role: "user",
-                reportes: ["cap-daniela-alamilla"]
+                reportes: ["reportes-mariposa", "reportes-colibri", "reportes-sequolla"]
             },
-            "ana.isabel": {
-                nombre: "Ana Isabel Cervantes",
-                password: "ana2026",
+            "gte.mariposa": {
+                nombre: "Gte. Ventas Mariposa",
+                password: "mariposa2026",
                 role: "user",
-                reportes: ["cap-ana-isabel"]
+                reportes: ["reportes-mariposa"]
             },
-            "delia.rodriguez": {
-                nombre: "Delia Rodriguez",
-                password: "delia2026",
+            "gte.colibri": {
+                nombre: "Gte. Ventas Colibrí",
+                password: "colibri2026",
                 role: "user",
-                reportes: ["cap-delia-rodriguez"]
+                reportes: ["reportes-colibri"]
             },
-            "alberto.rodriguez": {
-                nombre: "Alberto Rodriguez",
-                password: "alberto2026",
+            "gte.sequolla": {
+                nombre: "Gte. Ventas Sequoia",
+                password: "sequolla2026",
                 role: "user",
-                reportes: ["cap-alberto-rodriguez"]
+                reportes: ["reportes-sequolla"]
             }
         };
 
         // Re-seed si cambia la versión del sistema de permisos
-        const AIRAPI_VERSION = "3";
+        const AIRAPI_VERSION = "4";
         if (localStorage.getItem('airapi_version') !== AIRAPI_VERSION) {
             localStorage.setItem('airapi_users', JSON.stringify(USUARIOS_DEFAULT));
             localStorage.setItem('airapi_version', AIRAPI_VERSION);
